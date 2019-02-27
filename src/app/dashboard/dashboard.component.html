@@ -1,0 +1,20 @@
+  <div class="row">
+    <div class="col-12">
+      <h3>
+        {{name}}
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <app-users-list [myUsers]="users"></app-users-list>
+    </div>
+    <div class="col-5">
+        <div class="jumbotron">
+          <div class="form-group">
+            <input [(ngModel)]="addUser" (keyup)="onKey($event)" type="text" class="form-control" placeholder="New user.." required>
+          </div>
+          <app-edit-user (onChangeAdd)="AddUser()" (onChangeRemove)="RemoveUser()"></app-edit-user>
+        </div>
+    </div>
+  </div>
