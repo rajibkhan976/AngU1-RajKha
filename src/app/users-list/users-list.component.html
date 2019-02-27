@@ -1,8 +1,6 @@
 <div class="jumbotron">
-  <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action" *ngFor="let user of myUsers" class="list-group-item" [ngStyle]="changeListItemColor()">
-      {{user}}
-    </a>
-    <app-user-list-item (onChangeUserListItem)="toggleUserListItem()"></app-user-list-item>
-  </div>
+  <ul class="list-group">
+    <app-user-list-item *ngFor="let user of myUsers" [singleUser]="user" [listItemColor]="usersListItemColor"></app-user-list-item>
+    <button type="button" class="btn btn-info btn-lg btn-block" name="button" (click)="toggleUserListItem()">Toggle Colors</button>
+  </ul>
 </div>

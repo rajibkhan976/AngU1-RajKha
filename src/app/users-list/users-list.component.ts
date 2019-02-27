@@ -9,18 +9,16 @@ export class UsersListComponent {
 
   @Input() myUsers: string[];
   toggleUserItem:boolean = true;
+  usersListItemColor:any = {'color' : 'red'};
 
   constructor() { }
 
   toggleUserListItem():void {
     this.toggleUserItem = !this.toggleUserItem;
-  }
-
-  changeListItemColor() {
     if (this.toggleUserItem === true) {
-      return {'color' : 'red'};
+      this.usersListItemColor = {'color' : 'red'};
     } else {
-      return {'color' : 'green'};
+      this.usersListItemColor = {'color' : 'green'};
     }
   }
 

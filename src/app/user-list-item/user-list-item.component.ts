@@ -7,14 +7,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class UserListItemComponent {
 
-  @Input() myUsers:string[];
-  @Output() onChangeUserListItem = new EventEmitter<boolean>();
+  @Input() singleUser:string;
+  @Input() listItemColor: any;
 
   constructor() {
 
-   }
-   onClickedChangeValue() {
-     this.onChangeUserListItem.emit();
    }
 
 }

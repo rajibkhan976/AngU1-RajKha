@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
 
   name:string = "Dashboard";
-  users: string[] = ['Rajib','Hossain','Khan'];
+  userList: string[] = ['Rajib','Hossain','Khan'];
   addUser:string;
 
   constructor() {
@@ -21,14 +21,14 @@ export class DashboardComponent {
      }
 
      AddUser():void {
-         this.users.unshift(this.addUser);
-         console.log(this.users);
+         this.userList.unshift(this.addUser);
+         console.log(this.userList);
          console.log(this.addUser);
      }
 
      RemoveUser():void {
-       this.users.pop();
-       console.log(this.users);
+       this.userList.pop();
+       console.log(this.userList);
      }
 
 }
