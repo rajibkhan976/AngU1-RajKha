@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./user-list-item.component.css']
 })
 export class UserListItemComponent {
-
+  //Input properties are defined
   @Input() singleUser:string;
   @Input() listItemColor: any;
 
